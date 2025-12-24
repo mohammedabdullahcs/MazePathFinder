@@ -9,17 +9,17 @@ set(CMAKE_INCLUDE_CURRENT_DIR ON)
 find_package(Qt6 COMPONENTS Core Gui Widgets REQUIRED)
 
 set(PROJECT_SOURCES
-    src/main.cpp
-    src/mainwindow.h
-    src/mainwindow.cpp
-    src/mazescene.h
-    src/mazescene.cpp
-    src/maze.h
-    src/maze.cpp
-    src/unionfind.h
-    src/unionfind.cpp
-    src/pathfinder.h
-    src/pathfinder.cpp
+    main.cpp
+    mainwindow.h
+    mainwindow.cpp
+    mazescene.h
+    mazescene.cpp
+    maze.h
+    maze.cpp
+    unionfind.h
+    unionfind.cpp
+    pathfinder.h
+    pathfinder.cpp
 )
 
 add_executable(${PROJECT_NAME} ${PROJECT_SOURCES})
