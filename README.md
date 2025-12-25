@@ -18,7 +18,7 @@ A high-performance C++ application visualizing advanced Data Structures and Algo
 
 ## 🚀 Features
 
-*   **Perfect Maze Generation:** Uses **Randomized Kruskal's Algorithm** to create a maze with exactly one path between any two points (no loops, no unreachable areas).
+*   **Maze Generation with Cycles:** Uses **Randomized Kruskal's Algorithm** to create the base structure, but intentionally removes extra walls to create loops. This ensures multiple paths exist, allowing for a true comparison between BFS and DFS.
 *   **Interactive Pathfinding:**
     *   **BFS (Breadth-First Search):** Guarantees the shortest path.
     *   **DFS (Depth-First Search):** Explores deep branches first.
@@ -43,6 +43,8 @@ Originally for Minimum Spanning Trees (MST), adapted here for maze generation:
 2.  Randomize the order of all walls.
 3.  Iterate through walls: if removing a wall connects two previously unconnected cells (checked via Union-Find), remove it.
 4.  Result: A random spanning tree of the grid.
+
+> **Note:** To better demonstrate the difference between BFS and DFS, we post-process the maze by removing a few additional random walls. This creates **cycles** (loops) in the graph, providing multiple routes to the destination so you can see BFS find the shortest one while DFS might take a longer route.
 
 ### 3. Pathfinding Solvers
 
